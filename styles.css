@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Figtree;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf), url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+:root {
+    --primary-yellow: #f4d04e;
+    --neutral-white: #fff;
+    --neutral-grey: #808080;
+    --neutral-black: #121212;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Figtree, sans-serif;
+    background-color: var(--primary-yellow);
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 16rem;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 14px;
+    border: 1px solid var(--neutral-black);
+    background-color: var(--neutral-white);
+}
+.card .card__image img {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+}
+.card .card__tag {
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 4px 0.5rem;
+    border-radius: 2px;
+    background-color: var(--primary-yellow);
+}
+.card .card__date {
+    font-size: 0.6rem;
+}
+.card .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+}
+.card .card__content .card__title {
+    font-weight: 800;
+    line-height: 1rem;
+}
+
+.card .card__content .card__title:hover {
+    color: var(--primary-yellow);
+    cursor: pointer;
+}
+
+.card .card__content .card__description {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 0.9rem;
+}
+.card .card__author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.card .card__author img {
+    width: 20px;
+    border-radius: 50%;
+}
+.card .card__author .card__author-name {
+    font-size: 0.6rem;
+    font-weight: 800;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--neutral-black);
+    background-color: var(--neutral-black);
+    z-index: -1;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: #3e52a3;
+}
